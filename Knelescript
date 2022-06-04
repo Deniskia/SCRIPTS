@@ -1,1 +1,26 @@
 
+game.StarterGui:SetCore(
+    "SendNotification",
+    {
+	Title = "knele",
+	Text = "Knele, You're whitelisted.",
+}
+)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Rayhittaware", "DarkTheme")
+local Tab1 = Window:NewTab("Player")
+local Section = Tab1:NewSection("Player")
+Section:NewLabel("Player")
+Section:NewButton("Speed", "speed", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
+end)
+local Tab2 = Window:NewTab("ESP")
+local Section = Tab2:NewSection("ESP")
+Section:NewButton("ESP", "esp", function()
+loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+end)
+local Tab3 = Window:NewTab("SilentAim")
+local Section = Tab3:NewSection("SilentAim")
+Section:NewButton("SilentAim", "Silentaim", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tayodevelup/imsoniac/main/silentaim", true))()
+end)
